@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import SvgComponent from "./SvgComponent";
+import login from "../../components/Auth/Login";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -102,13 +104,13 @@ const Navbar = () => {
             </li>
           </ul>
           <div className="flex mt-4 md:mt-0 md:ml-4 flex justify-center items-center lg:p-10  ">
-            <button
-              href="#"
+            <NavLink
+              to="/login"
               className="block py-2 px-4 bg-black text-white hover:text-orange-500 font-medium rounded-lg lg:text-lg"
               onClick={closeMenu}
             >
               Sign In
-            </button>
+            </NavLink>
           </div>
         </div>
       </div>
