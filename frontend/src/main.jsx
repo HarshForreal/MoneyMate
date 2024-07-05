@@ -65,26 +65,45 @@ import Contact from "./pages/Contact.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Layout />, // Use the Layout component
+    element: <Layout />,
     children: [
       {
         path: "/",
         element: <App />,
       },
-      {
-        path: "/dashboard",
-        element: <Dashboard />,
-      },
-      {
-        path: "/about",
-        element: <About />,
-      },
+    ],
+  },
+  {
+    path: "/",
+    element: <Layout />,
+    children: [
       {
         path: "/contact",
         element: <Contact />,
       },
     ],
   },
+  {
+    path: "/",
+    element: <Layout />,
+    children: [
+      {
+        path: "/about",
+        element: <About />,
+      },
+    ],
+  },
+  {
+    path: "/",
+    element: <Layout />,
+    children: [
+      {
+        path: "/dashboard",
+        element: <Dashboard />,
+      },
+    ],
+  },
+
   {
     path: "/login",
     element: <LoginLayout />, // Use the LoginLayout component for the login route
