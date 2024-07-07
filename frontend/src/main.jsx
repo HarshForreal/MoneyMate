@@ -68,7 +68,7 @@ const router = createBrowserRouter([
     element: <Layout />,
     children: [
       {
-        index: true,
+        path: "/",
         element: <App />,
       },
       {
@@ -85,47 +85,47 @@ const router = createBrowserRouter([
       },
     ],
   },
-  {
-    path: "/login",
-    element: <LoginLayout />,
-    children: [
-      {
-        index: true,
-        element: <Login />,
-      },
-    ],
-  },
-  {
-    path: "/register",
-    element: <LoginLayout />,
-    children: [
-      {
-        index: true,
-        element: <Register />,
-      },
-    ],
-  },
+  // {
+  //   path: "/login",
+  //   element: <LoginLayout />,
+  //   children: [
+  //     {
+  //       index: true,
+  //       element: <Login />,
+  //     },
+  //   ],
+  // },
+  // {
+  //   path: "/register",
+  //   element: <LoginLayout />,
+  //   children: [
+  //     {
+  //       index: true,
+  //       element: <Register />,
+  //     },
+  //   ],
+  // },
 ]);
 
-const onRedirectCallback = (appState) => {
-  window.history.replaceState(
-    {},
-    document.title,
-    appState?.returnTo || window.location.pathname
-  );
-};
+// const onRedirectCallback = (appState) => {
+//   window.history.replaceState(
+//     {},
+//     document.title,
+//     appState?.returnTo || window.location.pathname
+//   );
+// };
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <Auth0Provider
-    domain="dev-ucupvgvo7h3231ok.us.auth0.com"
-    clientId="ISA1zJx2E4iXuPoTnc3FTtninkdCOZvX"
-    authorizationParams={{
-      redirect_uri: window.location.origin,
-    }}
-    onRedirectCallback={onRedirectCallback}
-  >
-    <React.StrictMode>
-      <RouterProvider router={router} />
-    </React.StrictMode>
-  </Auth0Provider>
+  // <Auth0Provider
+  //   domain="dev-ucupvgvo7h3231ok.us.auth0.com"
+  //   clientId="ISA1zJx2E4iXuPoTnc3FTtninkdCOZvX"
+  //   authorizationParams={{
+  //     redirect_uri: window.location.origin,
+  //   }}
+  //   onRedirectCallback={onRedirectCallback}
+  // >
+  <React.StrictMode>
+    <RouterProvider router={router} />
+  </React.StrictMode>
+  // </Auth0Provider>
 );
