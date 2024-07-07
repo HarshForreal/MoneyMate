@@ -118,7 +118,7 @@ const onRedirectCallback = (appState) => {
 ReactDOM.createRoot(document.getElementById("root")).render(
   <Auth0Provider
     domain="dev-ucupvgvo7h3231ok.us.auth0.com"
-    clientId="ISA1zJx2E4iXuPoTnc3FTtninkdCOZvX"
+    clientId="EM0j50Iopz81oRxNnRrzzOI53XxpdOGp"
     authorizationParams={{
       redirect_uri: window.location.origin,
     }}
@@ -126,8 +126,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   >
     <React.StrictMode>
       <RouterProvider router={router} />
-    </React.StrictMode>
-    //{" "}
+    </React.StrictMode>{" "}
   </Auth0Provider>
 );
 
