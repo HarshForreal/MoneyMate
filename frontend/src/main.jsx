@@ -56,7 +56,6 @@ import "./index.css";
 import Layout from "./components/Shared/Layout.jsx";
 import LoginLayout from "./components/Shared/LoginLayout.jsx";
 import Login from "./components/Auth/Login.jsx";
-import Register from "./components/Auth/Register.jsx";
 import Dashboard from "./components/Dasboard/Dashboard.jsx";
 import About from "./pages/About.jsx";
 import Contact from "./pages/Contact.jsx";
@@ -92,16 +91,6 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <Login />,
-      },
-    ],
-  },
-  {
-    path: "/register",
-    element: <LoginLayout />,
-    children: [
-      {
-        index: true,
-        element: <Register />,
       },
     ],
   },
