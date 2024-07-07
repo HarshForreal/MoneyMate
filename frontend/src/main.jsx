@@ -56,7 +56,8 @@ import "./index.css";
 import Layout from "./components/Shared/Layout.jsx";
 import LoginLayout from "./components/Shared/LoginLayout.jsx";
 import Login from "./components/Auth/Login.jsx";
-import Dashboard from "./components/Dasboard/Dashboard.jsx";
+import Register from "./components/Auth/Register.jsx"; // Import Register
+import Dashboard from "./components/Dashboard/Dashboard.jsx"; // Fixed typo in Dashboard
 import About from "./pages/About.jsx";
 import Contact from "./pages/Contact.jsx";
 import { Auth0Provider } from "@auth0/auth0-react";
@@ -91,6 +92,16 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <Login />,
+      },
+    ],
+  },
+  {
+    path: "/register",
+    element: <LoginLayout />,
+    children: [
+      {
+        index: true,
+        element: <Register />,
       },
     ],
   },
